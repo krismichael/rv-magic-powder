@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://systems/actor/awareness.gd" type="Script" id=1]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 256.0
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 512.0
+
+[sub_resource type="CircleShape2D" id=4]
+radius = 1024.0
+
+[node name="awareness" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="raycast" type="RayCast2D" parent="."]
+rotation = -1.5708
+enabled = true
+cast_to = Vector2( 0, 2048 )
+
+[node name="personal" type="Area2D" parent="."]
+
+[node name="collision" type="CollisionShape2D" parent="personal"]
+shape = SubResource( 2 )
+
+[node name="social" type="Area2D" parent="."]
+
+[node name="collision" type="CollisionShape2D" parent="social"]
+shape = SubResource( 3 )
+
+[node name="public" type="Area2D" parent="."]
+
+[node name="collision" type="CollisionShape2D" parent="public"]
+shape = SubResource( 4 )

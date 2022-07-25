@@ -1,0 +1,92 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://assets/prototype/screen_splash_bg.png" type="Texture" id=1]
+[ext_resource path="res://interface/screen/splash/splash.gd" type="Script" id=2]
+[ext_resource path="res://systems/interface/menu.tscn" type="PackedScene" id=3]
+[ext_resource path="res://interface/menu/splash/splash.tscn" type="PackedScene" id=4]
+[ext_resource path="res://interface/menu/splash/load.tscn" type="PackedScene" id=5]
+[ext_resource path="res://interface/menu/splash/settings.tscn" type="PackedScene" id=6]
+[ext_resource path="res://interface/menu/splash/extras.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/prototype/logo_mp.png" type="Texture" id=8]
+[ext_resource path="res://assets/prototype/dialogue_player_default.png" type="Texture" id=9]
+
+[node name="splash" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="base" type="TextureRect" parent="."]
+modulate = Color( 0.537255, 0.454902, 0.333333, 1 )
+margin_right = 40.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 1920, 1080 )
+texture = ExtResource( 1 )
+expand = true
+
+[node name="character" type="TextureRect" parent="."]
+margin_left = 960.0
+margin_right = 1920.0
+margin_bottom = 1080.0
+texture = ExtResource( 9 )
+
+[node name="menu" parent="." instance=ExtResource( 3 )]
+
+[node name="splash" parent="menu" instance=ExtResource( 4 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -128.0
+margin_top = 60.0
+margin_right = 128.0
+margin_bottom = 340.0
+menu_path = NodePath("..")
+
+[node name="load" parent="menu" instance=ExtResource( 5 )]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -480.0
+margin_top = -270.0
+margin_right = 480.0
+margin_bottom = 270.0
+
+[node name="close" parent="menu/load" index="2"]
+menu_path = NodePath("../..")
+
+[node name="settings" parent="menu" instance=ExtResource( 6 )]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -480.0
+margin_top = -270.0
+margin_right = 480.0
+margin_bottom = 270.0
+
+[node name="close" parent="menu/settings" index="2"]
+menu_path = NodePath("../..")
+
+[node name="extras" parent="menu" instance=ExtResource( 7 )]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -480.0
+margin_top = -270.0
+margin_right = 480.0
+margin_bottom = 270.0
+
+[node name="close" parent="menu/extras" index="2"]
+menu_path = NodePath("../..")
+
+[node name="logo" type="TextureRect" parent="."]
+margin_right = 1920.0
+margin_bottom = 1080.0
+texture = ExtResource( 8 )
+
+[editable path="menu/load"]
+[editable path="menu/settings"]
+[editable path="menu/extras"]

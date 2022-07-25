@@ -10,8 +10,20 @@ config_version=4
 
 [application]
 
-config/name="Rv-magic-powder"
+config/name="MAGIC POWDER (Alpha 1.0.0)"
+run/main_scene="res://systems/game/launch.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/width=1920
+window/size/height=1080
+window/size/resizable=false
+window/size/borderless=true
+
+[node]
+
+name_casing=2
 
 [physics]
 

@@ -1,0 +1,140 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://assets/interface/fonts/Permanent_Marker/PermanentMarker-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://interface/menu/splash/splash.gd" type="Script" id=2]
+[ext_resource path="res://systems/game/startup.tscn" type="PackedScene" id=3]
+[ext_resource path="res://systems/utilities/scene_loader/scene_loader.tscn" type="PackedScene" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 20
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0.6, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.6, 0, 0, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0.6, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0.8, 0.8, 0.8, 0 )
+
+[node name="splash" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -1920.0
+margin_bottom = -1080.0
+rect_min_size = Vector2( 256, 280 )
+script = ExtResource( 2 )
+
+[node name="scene_loader" parent="." instance=ExtResource( 4 )]
+packed_scene = ExtResource( 3 )
+
+[node name="container" type="VBoxContainer" parent="."]
+margin_right = 256.0
+margin_bottom = 64.0
+custom_constants/separation = 8
+
+[node name="continue" type="Button" parent="container"]
+margin_right = 256.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 256, 40 )
+focus_mode = 0
+custom_fonts/font = SubResource( 1 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+shortcut_in_tooltip = false
+enabled_focus_mode = 0
+text = "Continue"
+
+[node name="new" type="Button" parent="container"]
+margin_top = 48.0
+margin_right = 256.0
+margin_bottom = 88.0
+rect_min_size = Vector2( 256, 40 )
+focus_mode = 0
+custom_fonts/font = SubResource( 1 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+shortcut_in_tooltip = false
+enabled_focus_mode = 0
+text = "New Game"
+
+[node name="load" type="Button" parent="container"]
+margin_top = 96.0
+margin_right = 256.0
+margin_bottom = 136.0
+rect_min_size = Vector2( 256, 40 )
+focus_mode = 0
+custom_fonts/font = SubResource( 1 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+shortcut_in_tooltip = false
+enabled_focus_mode = 0
+text = "Load"
+
+[node name="settings" type="Button" parent="container"]
+margin_top = 144.0
+margin_right = 256.0
+margin_bottom = 184.0
+rect_min_size = Vector2( 256, 40 )
+focus_mode = 0
+custom_fonts/font = SubResource( 1 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+shortcut_in_tooltip = false
+enabled_focus_mode = 0
+text = "Settings"
+
+[node name="extras" type="Button" parent="container"]
+margin_top = 192.0
+margin_right = 256.0
+margin_bottom = 232.0
+rect_min_size = Vector2( 256, 40 )
+focus_mode = 0
+custom_fonts/font = SubResource( 1 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+shortcut_in_tooltip = false
+enabled_focus_mode = 0
+text = "Extras"
+
+[node name="quit" type="Button" parent="container"]
+margin_top = 240.0
+margin_right = 256.0
+margin_bottom = 280.0
+rect_min_size = Vector2( 256, 40 )
+focus_mode = 0
+custom_fonts/font = SubResource( 1 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+shortcut_in_tooltip = false
+enabled_focus_mode = 0
+text = "Quit"
+
+[connection signal="pressed" from="container/continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="container/new" to="." method="_on_new_pressed"]
+[connection signal="pressed" from="container/load" to="." method="_on_load_pressed"]
+[connection signal="pressed" from="container/settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="container/extras" to="." method="_on_extras_pressed"]
+[connection signal="pressed" from="container/quit" to="." method="_on_quit_pressed"]

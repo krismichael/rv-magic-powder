@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/interface/graphics/graphic_64x64.png" type="Texture" id=1]
+[ext_resource path="res://systems/utilities/scene_loader/scene_loader.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/interface/fonts/Roboto/Roboto-Regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://interface/screen/developer/developer.tscn" type="PackedScene" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 24
+font_data = ExtResource( 3 )
+
+[node name="publisher" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="scene_loader" parent="." instance=ExtResource( 2 )]
+packed_scene = ExtResource( 4 )
+is_timed = true
+timed_delay = 3
+
+[node name="base" type="TextureRect" parent="."]
+modulate = Color( 0.0666667, 0.0666667, 0.0666667, 1 )
+margin_right = 40.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 1920, 1080 )
+texture = ExtResource( 1 )
+expand = true
+
+[node name="label" type="Label" parent="."]
+margin_left = 32.0
+margin_top = 32.0
+margin_right = 92.0
+margin_bottom = 46.0
+rect_min_size = Vector2( 128, 32 )
+custom_fonts/font = SubResource( 1 )
+text = "Publisher"
