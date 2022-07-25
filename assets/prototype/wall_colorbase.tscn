@@ -1,0 +1,116 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/prototype/wall_colorbase.png" type="Texture" id=1]
+
+[node name="wall_colorbase" type="Node2D"]
+
+[node name="standard" type="Node2D" parent="."]
+
+[node name="std_001" type="Sprite" parent="standard"]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 32, 256, 512 )
+
+[node name="std_002" type="Sprite" parent="standard"]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 320, 32, 256, 512 )
+
+[node name="std_003" type="Sprite" parent="standard"]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 608, 32, 256, 512 )
+
+[node name="std_004" type="Sprite" parent="standard"]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 896, 32, 256, 512 )
+
+[node name="std_005" type="Sprite" parent="standard"]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 1184, 32, 256, 512 )
+
+[node name="std_006" type="Sprite" parent="standard"]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 1472, 32, 256, 512 )
+
+[node name="std_007" type="Sprite" parent="standard"]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 1760, 32, 256, 512 )
+
+[node name="rough" type="Node2D" parent="."]
+
+[node name="rough_001" type="Sprite" parent="rough"]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 576, 256, 512 )
+
+[node name="rough_002" type="Sprite" parent="rough"]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 320, 576, 256, 512 )
+
+[node name="rough_003" type="Sprite" parent="rough"]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 608, 576, 256, 512 )
+
+[node name="rough_004" type="Sprite" parent="rough"]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 896, 576, 256, 512 )
+
+[node name="rough_005" type="Sprite" parent="rough"]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 1184, 576, 256, 512 )
+
+[node name="rough_006" type="Sprite" parent="rough"]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 1472, 576, 256, 512 )
+
+[node name="rough_007" type="Sprite" parent="rough"]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 1760, 576, 256, 512 )
+
+[node name="smooth" type="Node2D" parent="."]
+
+[node name="smooth_001" type="Sprite" parent="smooth"]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 1120, 256, 512 )
+
+[node name="smooth_002" type="Sprite" parent="smooth"]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 320, 1120, 256, 512 )
+
+[node name="smooth_003" type="Sprite" parent="smooth"]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 608, 1120, 256, 512 )
+
+[node name="smooth_004" type="Sprite" parent="smooth"]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 896, 1120, 256, 512 )
+
+[node name="smooth_005" type="Sprite" parent="smooth"]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 1184, 1120, 256, 512 )
+
+[node name="smooth_006" type="Sprite" parent="smooth"]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 1472, 1120, 256, 512 )
+
+[node name="smooth_007" type="Sprite" parent="smooth"]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 1760, 1120, 256, 512 )
